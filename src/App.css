@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "EB Garamond", cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*h2 {
+  color: #3f435c;
+}*/
+
+header h2 {
+  color: #c5c4c9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h6 {
+  color: #3f435c;
+  font-style: italic;
+}
+
+.card-img-overlay h5 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-image: linear-gradient(#c5c4c9, white);
+  padding: 20px 0;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #dad5d5, #3f435c, #151047);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jumbotron h2 {
+  color: #cec8ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-dark {
+  background-color: #2e2853;
+}
+
+.navbar {
+  padding: 0 15px;
+  height: 55px;
+  line-height: 55px;
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+div.transboxWhite {
+  /*margin: 30px;*/
+  background-color: #ffffff;
+  /*border: 1px solid black;*/
+  opacity: 0.7;
+}
+
+div.bgLight {
+  background-color: #f8f9f9;
+  border-radius: 4px;
+}
+
+div.transboxBlack {
+  margin: 0px;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.span.boxBlack {
+  background-color: #000000;
+  /*opacity: 0.5;*/
+}
+
+/*address {
+  font-weight: bold;
+}*/
+
+.carousel-caption {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+  border: solid #dad5d5;
+}
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#bookButton,
+#dropInButton {
+  color: black;
+}
+
+#bookModal .modal-header {
+  background-color: #271e81;
+  color: white;
+}
+
+#loginModal .modal-header {
+  background-color: #271e81;
+  color: white;
+}
+
+#bodyHome {
+  min-height: 60vh;
+  background-image: linear-gradient(transparent, white 85%), url("../src/images/iam_1.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bodyAbout {
+  min-height: 50vh;
+  background-image: linear-gradient(transparent, white 85%), url("../src/images/IMG_3728.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bodyContact {
+  min-height: 50vh;
+  background-image: linear-gradient(transparent, white 85%),
+    url("../src/images/ironmortar_november19-19102.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bodyClasses {
+  min-height: 50vh;
+  background-image: linear-gradient(transparent, white 85%), url("../src/images/im-0142.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
