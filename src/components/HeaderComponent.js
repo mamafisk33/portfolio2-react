@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -8,6 +8,10 @@ import {
   NavItem,
   Jumbotron,
   Button,
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
   Modal,
   ModalHeader,
   ModalBody,
@@ -18,16 +22,34 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
-/* onst options = [
-  { value: '7:00 AM"', label: "7:00 AM" },
-  { value: "7:15 AM", label: "7:15 AM" },
-  { value: "7:30 AM", label: "7:30 AM" },
-  { value: "7:45 AM", label: "7:45 AM" },
-  { value: "8:00 AM", label: "8:00 AM" },
-  { value: "8:15 AM", label: "8:15 AM" },
-  { value: "8:30 AM", label: "8:30 AM" },
-  { value: "8:45 AM", label: "8:45 AM" },
-]; */
+const SetAppt = (props) => {
+  /* thanks to for reactrap button dropdown example:
+  https://reactstrap.github.io/components/button-dropdown/ */
+
+  const [dropdownOpen, setOpen] = useState(false);
+
+  const toggle = () => setOpen(!dropdownOpen);
+
+  return (
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle caret>Appointment Time</DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>7:00 AM</DropdownItem>
+        <DropdownItem>7:15 AM</DropdownItem>
+        <DropdownItem>7:30 AM</DropdownItem>
+        <DropdownItem>7:45 AM</DropdownItem>
+        <DropdownItem>8:00 AM</DropdownItem>
+        <DropdownItem>8:15 AM</DropdownItem>
+        <DropdownItem>8:30 AM</DropdownItem>
+        <DropdownItem>8:45 AM</DropdownItem>
+        <DropdownItem>9:00 AM</DropdownItem>
+        <DropdownItem>9:15 AM</DropdownItem>
+        <DropdownItem>9:30 AM</DropdownItem>
+        <DropdownItem>9:45 AM</DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown>
+  );
+};
 
 class Header extends Component {
   constructor(props) {
@@ -198,10 +220,10 @@ class Header extends Component {
           <ModalBody>
             <Form onSubmit={this.handleBook}>
               <FormGroup>
-                <Label htmlFor="date" className="col-sm-6 col-form-label">
+                <Label htmlFor="date" className="ccol-form-label">
                   Date
                 </Label>
-                <div className="col-sm-6">
+                <div>
                   <Input
                     type="date"
                     id="date"
@@ -211,14 +233,7 @@ class Header extends Component {
                   />
                 </div>
               </FormGroup>
-              {/* <<FormGroup>
-                <Label htmlFor="idApptTime" className="col-sm-6 col-form-label">
-                  Appointment Time
-                </Label>
-                div className="col">
-                  <select name="myTime" id="idApptTime" optiona={options} />                    
-                </div>
-              </FormGroup> */}
+              <SetAppt />
               <FormGroup check>
                 <Label check>
                   <Input

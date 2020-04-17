@@ -32,7 +32,7 @@ const items = [
     src: "/assets/images/screencapture-mapquest.png",
     altText: "Mpp showing gym",
     caption:
-      " We are easy to find, near 24th Avenue and Nob Hill Boulevard in Yakima, Washington.Stop in, say Hello!",
+      " We are easy to find, near 24th Avenue and Nob Hill Boulevard in Yakima, Washington. Stop in, say Hello!",
   },
   {
     id: 5,
